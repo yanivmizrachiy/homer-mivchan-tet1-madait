@@ -6,89 +6,105 @@
 <title>חומר למבחן במתמטיקה כיתה ט׳1 מדעית</title>
 <style>
 :root{
-  --bg:#f7f2e8;
+  --bg:#f4efe4;
   --paper:#ffffff;
-  --ink:#162033;
+  --ink:#172033;
+  --muted:#4f596d;
   --blue:#173b73;
-  --line:#e5ddcf;
-  --soft:#eef5ff;
+  --line:#e2d8c8;
 }
 *{box-sizing:border-box}
+html{font-size:16px}
 body{
   margin:0;
   background:var(--bg);
   color:var(--ink);
   font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
-  line-height:1.8;
+  line-height:1.75;
 }
 .page{
-  width:min(760px,100%);
+  width:100%;
+  max-width:680px;
   margin:0 auto;
-  padding:18px 14px 42px;
+  padding:14px 12px 34px;
 }
-header{
+header,.section{
   background:var(--paper);
   border:1px solid var(--line);
-  border-radius:22px;
-  padding:22px 18px;
-  margin-bottom:14px;
+  border-radius:18px;
+  padding:18px 16px;
+  margin:0 0 12px;
 }
 h1{
   margin:0;
   color:var(--blue);
-  font-size:1.85rem;
+  font-size:1.65rem;
   line-height:1.25;
+  font-weight:900;
 }
 .date{
-  margin:12px 0 0;
-  font-size:1.15rem;
+  margin:10px 0 0;
+  color:var(--ink);
+  font-size:1.05rem;
   font-weight:800;
-}
-section{
-  background:var(--paper);
-  border:1px solid var(--line);
-  border-radius:20px;
-  padding:18px 16px;
-  margin:12px 0;
 }
 h2{
   margin:0 0 10px;
   color:var(--blue);
-  font-size:1.35rem;
+  font-size:1.28rem;
+  line-height:1.25;
+  font-weight:900;
 }
 h3{
-  margin:16px 0 8px;
-  color:#243550;
-  font-size:1.1rem;
+  margin:14px 0 6px;
+  color:var(--ink);
+  font-size:1.02rem;
+  line-height:1.35;
+  font-weight:850;
 }
-p{margin:8px 0}
-ul,ol{
-  margin:8px 0;
-  padding-right:1.25rem;
+p{margin:7px 0}
+ul{
+  margin:7px 0;
+  padding-right:1.15rem;
 }
-li{margin:7px 0}
+li{margin:6px 0}
+.math-list{
+  display:grid;
+  gap:6px;
+  margin:8px 0 4px;
+}
 .math{
   direction:ltr;
   unicode-bidi:isolate;
   text-align:left;
   display:block;
   font-family:"Cambria Math","Times New Roman",serif;
-  background:var(--soft);
-  border:1px solid #d7e6fb;
-  border-radius:12px;
-  padding:9px 10px;
-  margin:7px 0;
+  color:#111827;
+  font-size:1.05rem;
+  line-height:1.45;
+  padding:0;
+  margin:0;
   overflow-x:auto;
   white-space:nowrap;
 }
-.small{
-  font-size:.95rem;
-  color:#4d5668;
+.label-line strong{color:var(--blue)}
+.footer-note{
+  color:var(--muted);
+  font-size:.94rem;
+  text-align:center;
+  margin:14px 0 0;
+}
+@media (max-width:420px){
+  .page{padding:10px 9px 28px}
+  header,.section{border-radius:16px;padding:16px 14px}
+  h1{font-size:1.45rem}
+  h2{font-size:1.18rem}
+  body{line-height:1.7}
 }
 @media print{
-  body{background:white}
-  .page{width:100%;padding:0}
-  header,section{break-inside:avoid}
+  body{background:#fff}
+  .page{max-width:none;padding:0}
+  header,.section{break-inside:avoid;border-color:#ddd}
 }
 </style>
 </head>
@@ -100,19 +116,23 @@ li{margin:7px 0}
   <p class="date">המבחן יתקיים ביום רביעי, 20 במאי</p>
 </header>
 
-<section>
+<section class="section">
   <h2>אלגברה</h2>
 
   <h3>חוק הפילוג המורחב</h3>
-  <span class="math">(a + b)(c + d) = ac + ad + bc + bd</span>
+  <div class="math-list">
+    <span class="math">(a + b)(c + d) = ac + ad + bc + bd</span>
+  </div>
 
   <h3>נוסחאות כפל מקוצר</h3>
-  <span class="math">(a + b)² = a² + 2ab + b²</span>
-  <span class="math">(a − b)² = a² − 2ab + b²</span>
-  <span class="math">(a + b)(a − b) = a² − b²</span>
+  <div class="math-list">
+    <span class="math">(a + b)² = a² + 2ab + b²</span>
+    <span class="math">(a − b)² = a² − 2ab + b²</span>
+    <span class="math">(a + b)(a − b) = a² − b²</span>
+  </div>
 </section>
 
-<section>
+<section class="section">
   <h2>משוואות ריבועיות</h2>
   <ul>
     <li>משוואות ריבועיות מכל הסוגים שנלמדו.</li>
@@ -122,7 +142,7 @@ li{margin:7px 0}
   </ul>
 </section>
 
-<section>
+<section class="section">
   <h2>קדם־אנליזה ופונקציות</h2>
   <ul>
     <li>נקודות חיתוך של פונקציות עם הצירים.</li>
@@ -132,7 +152,7 @@ li{margin:7px 0}
   </ul>
 </section>
 
-<section>
+<section class="section">
   <h2>פונקציה ריבועית (פרבולה)</h2>
   <ul>
     <li>חקירה מלאה של פרבולה.</li>
@@ -145,25 +165,20 @@ li{margin:7px 0}
   </ul>
 </section>
 
-<section>
+<section class="section">
   <h2>גיאומטריה</h2>
-
   <p>המרובעים: דלתון, מקבילית, מלבן, מעוין, ריבוע וטרפז.</p>
-
   <p>הגדרות, תכונות, משפטים הפוכים ומציאת שטח והיקף.</p>
 </section>
 
-<section>
+<section class="section">
   <h2>קטע אמצעים במשולש</h2>
-
-  <p><strong>הגדרה:</strong> קטע אמצעים במשולש הוא קטע המחבר את אמצעי שתי צלעות במשולש.</p>
-
-  <p><strong>משפט:</strong> קטע אמצעים במשולש מקביל לצלע השלישית ושווה למחציתה.</p>
-
-  <p><strong>משפט הפוך:</strong> במשולש, קטע המחבר שתי צלעות, חוצה אחת מהן ומקביל לצלע השלישית, הוא קטע אמצעים.</p>
+  <p class="label-line"><strong>הגדרה:</strong> קטע אמצעים במשולש הוא קטע המחבר את אמצעי שתי צלעות במשולש.</p>
+  <p class="label-line"><strong>משפט:</strong> קטע אמצעים במשולש מקביל לצלע השלישית ושווה למחציתה.</p>
+  <p class="label-line"><strong>משפט הפוך:</strong> במשולש, קטע המחבר שתי צלעות, חוצה אחת מהן ומקביל לצלע השלישית, הוא קטע אמצעים.</p>
 </section>
 
-<p class="small">החומר נכתב רק לפי הנושאים שנמסרו בפועל.</p>
+<p class="footer-note">החומר נכתב רק לפי הנושאים שנמסרו בפועל.</p>
 
 </div>
 </body>
