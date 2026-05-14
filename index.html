@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>חומר למבחן במתמטיקה כיתה ט׳1 מדעית</title>
+<title>נושאים למבחן במתמטיקה כיתה ט׳1 מדעית</title>
 <meta name="theme-color" content="#173b73">
 <style>
 :root{
@@ -11,12 +11,10 @@
   --bg-soft:#fbf8f2;
   --paper:#ffffff;
   --ink:#1a2233;
-  --muted:#5c667a;
   --blue:#173b73;
   --blue2:#234d8f;
   --gold:#c9a86a;
   --line:#e7dcc9;
-  --shadow:0 12px 32px rgba(30,43,72,.08);
   --soft-shadow:0 5px 18px rgba(30,43,72,.045);
 }
 *{box-sizing:border-box}
@@ -31,144 +29,37 @@ body{
   line-height:1.75;
   text-align:right;
 }
-.page{
-  width:100%;
-  max-width:760px;
-  margin:0 auto;
-  padding:14px 10px 34px;
-}
+.page{width:100%;max-width:760px;margin:0 auto;padding:14px 10px 34px}
 .hero{
-  position:relative;
-  overflow:hidden;
-  background:linear-gradient(135deg,#132f63 0%,#1f4b8c 100%);
-  color:#fff;
-  border-radius:28px;
-  padding:28px 18px 24px;
-  margin:0 0 14px;
-  box-shadow:0 18px 44px rgba(23,59,115,.24);
-  text-align:center;
+  position:relative;overflow:hidden;background:linear-gradient(135deg,#132f63 0%,#1f4b8c 100%);color:#fff;
+  border-radius:28px;padding:28px 18px 24px;margin:0 0 14px;box-shadow:0 18px 44px rgba(23,59,115,.24);text-align:center
 }
-.hero:before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(circle at 12% 10%,rgba(255,255,255,.18),transparent 24%),
-    radial-gradient(circle at 88% 92%,rgba(201,168,106,.22),transparent 28%);
-}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% 10%,rgba(255,255,255,.18),transparent 24%),radial-gradient(circle at 88% 92%,rgba(201,168,106,.22),transparent 28%)}
 .hero>*{position:relative;z-index:1}
-h1{
-  margin:0 0 10px;
-  color:#fff;
-  font-size:clamp(1.55rem,5vw,2.25rem);
-  line-height:1.22;
-  font-weight:900;
-  text-align:center;
-}
-.date{
-  margin:0;
-  color:#fff1d1;
-  font-size:1.05rem;
-  font-weight:850;
-  text-align:center;
-}
-.section{
-  background:var(--paper);
-  border:1px solid var(--line);
-  border-radius:22px;
-  padding:18px 15px 16px;
-  margin:0 0 14px;
-  box-shadow:var(--soft-shadow);
-  text-align:right;
-  position:relative;
-}
-.section:before{
-  content:"";
-  position:absolute;
-  top:0;
-  right:20px;
-  left:20px;
-  height:4px;
-  border-radius:0 0 999px 999px;
-  background:linear-gradient(90deg,var(--gold),var(--blue2));
-}
-h2{
-  margin:6px 0 14px;
-  color:var(--blue);
-  font-size:1.3rem;
-  line-height:1.25;
-  font-weight:900;
-  text-align:center;
-}
-h3{
-  margin:17px 0 9px;
-  color:var(--blue);
-  font-size:1.04rem;
-  line-height:1.35;
-  font-weight:850;
-  text-align:center;
-}
-h3:after{
-  content:"";
-  display:block;
-  width:54px;
-  height:2px;
-  background:linear-gradient(90deg,var(--gold),rgba(201,168,106,.15));
-  border-radius:999px;
-  margin:7px auto 0;
-}
+h1{margin:0 0 10px;color:#fff;font-size:clamp(1.55rem,5vw,2.25rem);line-height:1.22;font-weight:900;text-align:center}
+.date{margin:0;color:#fff1d1;font-size:1.05rem;font-weight:850;text-align:center}
+.section{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:18px 15px 16px;margin:0 0 14px;box-shadow:var(--soft-shadow);text-align:right;position:relative}
+.section:before{content:"";position:absolute;top:0;right:20px;left:20px;height:4px;border-radius:0 0 999px 999px;background:linear-gradient(90deg,var(--gold),var(--blue2))}
+h2{margin:6px 0 14px;color:var(--blue);font-size:1.3rem;line-height:1.25;font-weight:900;text-align:center}
+h3{margin:17px 0 9px;color:var(--blue);font-size:1.04rem;line-height:1.35;font-weight:850;text-align:center}
+h3:after{content:"";display:block;width:54px;height:2px;background:linear-gradient(90deg,var(--gold),rgba(201,168,106,.15));border-radius:999px;margin:7px auto 0}
 p{margin:8px 0;text-align:right;font-size:1rem}
-ul{
-  margin:0;
-  padding-right:1.25rem;
-  padding-left:0;
-  list-style-position:outside;
-  text-align:right;
-}
+ul{margin:0;padding-right:1.25rem;padding-left:0;list-style-position:outside;text-align:right}
 li{margin:7px 0;text-align:right;font-size:1rem}
-.content-box,.math-box{
-  background:var(--bg-soft);
-  border:1px solid #ece2d3;
-  border-radius:15px;
-  padding:12px 12px;
-  margin:8px 0 4px;
-}
+.content-box,.math-box{background:var(--bg-soft);border:1px solid #ece2d3;border-radius:15px;padding:12px 12px;margin:8px 0 4px}
 .math-list{display:grid;gap:9px}
-.math{
-  direction:ltr;
-  unicode-bidi:isolate;
-  display:block;
-  max-width:100%;
-  overflow-x:auto;
-  white-space:nowrap;
-  text-align:center;
-  font-family:"Cambria Math","Times New Roman",serif;
-  font-size:1.08rem;
-  line-height:1.5;
-  color:#111827;
-}
-@media(max-width:520px){
-  .page{padding:10px 8px 28px}
-  .hero{border-radius:22px;padding:22px 14px 18px}
-  .section{border-radius:19px;padding:16px 13px 14px}
-  h2{font-size:1.18rem}
-  h3{font-size:1rem}
-  p,li{font-size:.98rem}
-  .math{font-size:1.02rem}
-}
-@media print{
-  body{background:#fff}
-  .page{max-width:none;padding:0}
-  .hero,.section{box-shadow:none;break-inside:avoid}
-}
+.math{direction:ltr;unicode-bidi:isolate;display:block;max-width:100%;overflow-x:auto;white-space:nowrap;text-align:center;font-family:"Cambria Math","Times New Roman",serif;font-size:1.08rem;line-height:1.5;color:#111827}
+.inline-math{direction:ltr;unicode-bidi:isolate;display:inline-block;font-family:"Cambria Math","Times New Roman",serif;white-space:nowrap}
+@media(max-width:520px){.page{padding:10px 8px 28px}.hero{border-radius:22px;padding:22px 14px 18px}.section{border-radius:19px;padding:16px 13px 14px}h2{font-size:1.18rem}h3{font-size:1rem}p,li{font-size:.98rem}.math{font-size:1.02rem}}
+@media print{body{background:#fff}.page{max-width:none;padding:0}.hero,.section{box-shadow:none;break-inside:avoid}}
 </style>
 </head>
 <body>
 <div class="page">
 
 <header class="hero">
-  <h1>חומר למבחן במתמטיקה כיתה ט׳1 מדעית</h1>
-  <p class="date">המבחן יתקיים ביום רביעי, 20 במאי</p>
+  <h1>נושאים למבחן במתמטיקה כיתה ט׳1 מדעית</h1>
+  <p class="date">יום רביעי הקרוב, 20/5</p>
 </header>
 
 <section class="section">
@@ -223,10 +114,11 @@ li{margin:7px 0;text-align:right;font-size:1rem}
   <h2>קדם־אנליזה ופונקציות — לפי חוברת ארכימדס</h2>
   <div class="content-box">
     <ul>
-      <li>שימוש בפונקציות קוויות מהצורה <span class="math">y = mx + b</span>, כפי שנלמד בכיתה ח׳.</li>
+      <li>שימוש בפונקציות קוויות מהצורה <span class="inline-math">y = mx + b</span>, כפי שנלמד בכיתה ח׳.</li>
       <li>נקודות חיתוך של פונקציות עם הצירים.</li>
       <li>תחומי חיוביות ושליליות על פי הציור.</li>
-      <li>עלייה וירידה של פונקציה.</li>
+      <li>תחומי עלייה וירידה של פונקציה.</li>
+      <li>מספר נקודות החיתוך של הישר <span class="inline-math">y = k</span> עם הגרף הנתון של <span class="inline-math">f(x)</span>.</li>
       <li>הזזות של פונקציות.</li>
     </ul>
   </div>
