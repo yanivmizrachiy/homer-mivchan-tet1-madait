@@ -21,6 +21,7 @@ body{
   color:var(--ink);
   font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
   line-height:1.75;
+  text-align:center;
 }
 .page{
   width:100%;
@@ -34,6 +35,7 @@ header,.section{
   border-radius:18px;
   padding:18px 16px;
   margin:0 0 12px;
+  text-align:center;
 }
 h1{
   margin:0;
@@ -41,12 +43,14 @@ h1{
   font-size:1.65rem;
   line-height:1.25;
   font-weight:900;
+  text-align:center;
 }
 .date{
   margin:10px 0 0;
   color:var(--ink);
   font-size:1.05rem;
   font-weight:800;
+  text-align:center;
 }
 h2{
   margin:0 0 10px;
@@ -54,6 +58,7 @@ h2{
   font-size:1.28rem;
   line-height:1.25;
   font-weight:900;
+  text-align:center;
 }
 h3{
   margin:14px 0 6px;
@@ -61,31 +66,42 @@ h3{
   font-size:1.02rem;
   line-height:1.35;
   font-weight:850;
+  text-align:center;
 }
-p{margin:7px 0}
-ul{
+p{
   margin:7px 0;
-  padding-right:1.15rem;
+  text-align:center;
 }
-li{margin:6px 0}
+ul{
+  margin:7px auto;
+  padding:0;
+  list-style-position:inside;
+  text-align:center;
+}
+li{
+  margin:6px 0;
+  text-align:center;
+}
 .math-list{
   display:grid;
   gap:6px;
   margin:8px 0 4px;
+  justify-items:center;
 }
 .math{
   direction:ltr;
   unicode-bidi:isolate;
-  text-align:left;
+  text-align:center;
   display:block;
   font-family:"Cambria Math","Times New Roman",serif;
   color:#111827;
   font-size:1.05rem;
   line-height:1.45;
   padding:0;
-  margin:0;
+  margin:0 auto;
   overflow-x:auto;
   white-space:nowrap;
+  max-width:100%;
 }
 .label-line strong{color:var(--blue)}
 .footer-note{
