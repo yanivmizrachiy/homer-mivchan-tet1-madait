@@ -4,20 +4,28 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>חומר למבחן במתמטיקה כיתה ט׳1 מדעית</title>
+<meta name="theme-color" content="#173b73">
 <style>
 :root{
-  --bg:#f4efe4;
+  --bg:#f6f1e8;
+  --bg-soft:#fbf8f2;
   --paper:#ffffff;
-  --ink:#172033;
-  --muted:#4f596d;
+  --ink:#1a2233;
+  --muted:#5c667a;
   --blue:#173b73;
-  --line:#e2d8c8;
+  --blue2:#234d8f;
+  --gold:#c9a86a;
+  --line:#e7dcc9;
+  --shadow:0 12px 32px rgba(30,43,72,.08);
+  --soft-shadow:0 5px 18px rgba(30,43,72,.045);
 }
 *{box-sizing:border-box}
-html{font-size:16px}
+html{font-size:16px;scroll-behavior:smooth}
 body{
   margin:0;
-  background:var(--bg);
+  background:
+    radial-gradient(circle at top right, rgba(201,168,106,.18), transparent 22%),
+    linear-gradient(180deg,#fbf8f2 0%,#f4eee4 100%);
   color:var(--ink);
   font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
   line-height:1.75;
@@ -25,84 +33,128 @@ body{
 }
 .page{
   width:100%;
-  max-width:680px;
+  max-width:760px;
   margin:0 auto;
-  padding:14px 12px 34px;
+  padding:14px 10px 34px;
 }
-header,.section{
-  background:var(--paper);
-  border:1px solid var(--line);
-  border-radius:18px;
-  padding:18px 16px;
-  margin:0 0 12px;
-  text-align:right;
+.hero{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(135deg,#132f63 0%,#1f4b8c 100%);
+  color:#fff;
+  border-radius:28px;
+  padding:26px 18px 22px;
+  margin:0 0 14px;
+  box-shadow:0 18px 44px rgba(23,59,115,.24);
+  text-align:center;
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 12% 10%,rgba(255,255,255,.18),transparent 24%),
+    radial-gradient(circle at 88% 92%,rgba(201,168,106,.22),transparent 28%);
+}
+.hero>*{position:relative;z-index:1}
+.badge{
+  display:inline-block;
+  border:1px solid rgba(255,255,255,.24);
+  background:rgba(255,255,255,.12);
+  border-radius:999px;
+  padding:6px 13px;
+  font-weight:850;
+  font-size:.94rem;
 }
 h1{
-  margin:0;
-  color:var(--blue);
-  font-size:1.65rem;
-  line-height:1.25;
+  margin:15px 0 9px;
+  color:#fff;
+  font-size:clamp(1.55rem,5vw,2.25rem);
+  line-height:1.22;
   font-weight:900;
   text-align:center;
 }
 .date{
-  margin:10px 0 0;
-  color:var(--ink);
+  margin:0;
+  color:#fff1d1;
   font-size:1.05rem;
-  font-weight:800;
+  font-weight:850;
   text-align:center;
 }
+.section{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:18px 15px 16px;
+  margin:0 0 14px;
+  box-shadow:var(--soft-shadow);
+  text-align:right;
+  position:relative;
+}
+.section:before{
+  content:"";
+  position:absolute;
+  top:0;
+  right:20px;
+  left:20px;
+  height:4px;
+  border-radius:0 0 999px 999px;
+  background:linear-gradient(90deg,var(--gold),var(--blue2));
+}
 h2{
-  margin:0 0 12px;
+  margin:6px 0 14px;
   color:var(--blue);
-  font-size:1.28rem;
+  font-size:1.3rem;
   line-height:1.25;
   font-weight:900;
   text-align:center;
 }
 h3{
-  margin:16px 0 7px;
-  color:var(--ink);
-  font-size:1.03rem;
+  margin:17px 0 9px;
+  color:var(--blue);
+  font-size:1.04rem;
   line-height:1.35;
   font-weight:850;
   text-align:center;
 }
-p{
-  margin:7px 0;
-  text-align:right;
+h3:after{
+  content:"";
+  display:block;
+  width:54px;
+  height:2px;
+  background:linear-gradient(90deg,var(--gold),rgba(201,168,106,.15));
+  border-radius:999px;
+  margin:7px auto 0;
 }
+p{margin:8px 0;text-align:right;font-size:1rem}
 ul{
-  margin:7px 0;
-  padding-right:1.35rem;
+  margin:0;
+  padding-right:1.25rem;
   padding-left:0;
   list-style-position:outside;
   text-align:right;
 }
-li{
-  margin:6px 0;
-  text-align:right;
-}
-.math-list{
-  display:grid;
-  gap:6px;
+li{margin:7px 0;text-align:right;font-size:1rem}
+.content-box,.math-box{
+  background:var(--bg-soft);
+  border:1px solid #ece2d3;
+  border-radius:15px;
+  padding:12px 12px;
   margin:8px 0 4px;
-  justify-items:center;
 }
+.math-list{display:grid;gap:9px}
 .math{
   direction:ltr;
   unicode-bidi:isolate;
-  text-align:center;
   display:block;
-  font-family:"Cambria Math","Times New Roman",serif;
-  color:#111827;
-  font-size:1.05rem;
-  line-height:1.45;
-  padding:0;
-  margin:0 auto;
+  max-width:100%;
   overflow-x:auto;
   white-space:nowrap;
-  max-width:100%;
+  text-align:center;
+  font-family:"Cambria Math","Times New Roman",serif;
+  font-size:1.08rem;
+  line-height:1.5;
+  color:#111827;
 }
 .footer-note{
   color:var(--muted);
@@ -110,24 +162,27 @@ li{
   text-align:center;
   margin:14px 0 0;
 }
-@media (max-width:420px){
-  .page{padding:10px 9px 28px}
-  header,.section{border-radius:16px;padding:16px 14px}
-  h1{font-size:1.45rem}
+@media(max-width:520px){
+  .page{padding:10px 8px 28px}
+  .hero{border-radius:22px;padding:22px 14px 18px}
+  .section{border-radius:19px;padding:16px 13px 14px}
   h2{font-size:1.18rem}
-  body{line-height:1.7}
+  h3{font-size:1rem}
+  p,li{font-size:.98rem}
+  .math{font-size:1.02rem}
 }
 @media print{
   body{background:#fff}
   .page{max-width:none;padding:0}
-  header,.section{break-inside:avoid;border-color:#ddd}
+  .hero,.section{box-shadow:none;break-inside:avoid}
 }
 </style>
 </head>
 <body>
 <div class="page">
 
-<header>
+<header class="hero">
+  <div class="badge">כיתה ט׳1 מדעית</div>
   <h1>חומר למבחן במתמטיקה כיתה ט׳1 מדעית</h1>
   <p class="date">המבחן יתקיים ביום רביעי, 20 במאי</p>
 </header>
@@ -136,81 +191,109 @@ li{
   <h2>אלגברה</h2>
 
   <h3>חוק הפילוג המורחב:</h3>
-  <div class="math-list">
-    <span class="math">(a + b)(c + d) = ac + ad + bc + bd</span>
+  <div class="math-box">
+    <div class="math-list">
+      <span class="math">(a + b)(c + d) = ac + ad + bc + bd</span>
+    </div>
   </div>
 
   <h3>נוסחאות כפל מקוצר:</h3>
-  <div class="math-list">
-    <span class="math">(a + b)² = a² + 2ab + b²</span>
-    <span class="math">(a − b)² = a² − 2ab + b²</span>
-    <span class="math">(a + b)(a − b) = a² − b²</span>
+  <div class="math-box">
+    <div class="math-list">
+      <span class="math">(a + b)² = a² + 2ab + b²</span>
+      <span class="math">(a − b)² = a² − 2ab + b²</span>
+      <span class="math">(a + b)(a − b) = a² − b²</span>
+    </div>
   </div>
 
   <h3>פירוק לגורמים:</h3>
-  <ul>
-    <li>הוצאת גורם משותף.</li>
-    <li>פירוק על פי נוסחאות הכפל המקוצר.</li>
-    <li>פירוק על ידי טרינום.</li>
-  </ul>
+  <div class="content-box">
+    <ul>
+      <li>הוצאת גורם משותף.</li>
+      <li>פירוק על פי נוסחאות הכפל המקוצר.</li>
+      <li>פירוק על ידי טרינום.</li>
+    </ul>
+  </div>
 
   <h3>שברים אלגבריים:</h3>
-  <ul>
-    <li>צמצום שברים אלגבריים.</li>
-    <li>כפל וחילוק שברים אלגבריים.</li>
-    <li>מציאת תחום הצבה.</li>
-  </ul>
+  <div class="content-box">
+    <ul>
+      <li>צמצום שברים אלגבריים.</li>
+      <li>כפל וחילוק שברים אלגבריים.</li>
+      <li>מציאת תחום הצבה.</li>
+    </ul>
+  </div>
 </section>
 
 <section class="section">
   <h2>משוואות ריבועיות</h2>
   <h3>נושאים במשוואות ריבועיות:</h3>
-  <ul>
-    <li>משוואות ריבועיות מכל הסוגים שנלמדו.</li>
-    <li>משוואות עם ביטויים אלגבריים במכנים, כולל מציאת תחום הצבה.</li>
-  </ul>
+  <div class="content-box">
+    <ul>
+      <li>משוואות ריבועיות מכל הסוגים שנלמדו.</li>
+      <li>משוואות עם ביטויים אלגבריים במכנים, כולל מציאת תחום הצבה.</li>
+    </ul>
+  </div>
 </section>
 
 <section class="section">
   <h2>קדם־אנליזה ופונקציות — לפי חוברת ארכימדס</h2>
   <h3>נושאים בקדם־אנליזה ופונקציות:</h3>
-  <ul>
-    <li>נקודות חיתוך של פונקציות עם הצירים.</li>
-    <li>תחומי חיוביות ושליליות על פי הציור.</li>
-    <li>עלייה וירידה של פונקציה.</li>
-    <li>הזזות של פונקציות.</li>
-  </ul>
+  <div class="content-box">
+    <ul>
+      <li>נקודות חיתוך של פונקציות עם הצירים.</li>
+      <li>תחומי חיוביות ושליליות על פי הציור.</li>
+      <li>עלייה וירידה של פונקציה.</li>
+      <li>הזזות של פונקציות.</li>
+    </ul>
+  </div>
 </section>
 
 <section class="section">
   <h2>פונקציה ריבועית (פרבולה)</h2>
   <h3>חקירה מלאה של פרבולה:</h3>
-  <ul>
-    <li>מציאת שיעורי קודקוד בשיטות שלמדנו.</li>
-    <li>חיתוך עם הצירים.</li>
-    <li>תחומי חיוביות ושליליות.</li>
-    <li>תחומי עלייה וירידה.</li>
-    <li>חיתוך בין שתי פרבולות.</li>
-    <li>חיתוך בין פרבולה לישר.</li>
-  </ul>
+  <div class="content-box">
+    <ul>
+      <li>מציאת שיעורי קודקוד בשיטות שלמדנו.</li>
+      <li>חיתוך עם הצירים.</li>
+      <li>תחומי חיוביות ושליליות.</li>
+      <li>תחומי עלייה וירידה.</li>
+      <li>חיתוך בין שתי פרבולות.</li>
+      <li>חיתוך בין פרבולה לישר.</li>
+    </ul>
+  </div>
 </section>
 
 <section class="section">
   <h2>גיאומטריה</h2>
   <h3>מרובעים:</h3>
-  <p>דלתון, מקבילית, מלבן, מעוין, ריבוע וטרפז.</p>
+  <div class="content-box">
+    <p>דלתון, מקבילית, מלבן, מעוין, ריבוע וטרפז.</p>
+  </div>
+
   <h3>נושאים במרובעים:</h3>
-  <p>הגדרות, תכונות, משפטים, משפטים הפוכים, שטחים והיקפים.</p>
+  <div class="content-box">
+    <p>הגדרות, תכונות, משפטים, משפטים הפוכים, שטחים והיקפים.</p>
+  </div>
 </section>
 
 <section class="section">
   <h2>קטע אמצעים במשולש</h2>
+
   <h3>הגדרה:</h3>
-  <p>קטע אמצעים במשולש הוא קטע המחבר את אמצעי שתי צלעות במשולש.</p>
+  <div class="content-box">
+    <p>קטע אמצעים במשולש הוא קטע המחבר את אמצעי שתי צלעות במשולש.</p>
+  </div>
+
   <h3>משפט:</h3>
-  <p>קטע אמצעים במשולש מקביל לצלע השלישית ושווה למחציתה.</p>
+  <div class="content-box">
+    <p>קטע אמצעים במשולש מקביל לצלע השלישית ושווה למחציתה.</p>
+  </div>
+
   <h3>משפט הפוך:</h3>
-  <p>במשולש, קטע המחבר שתי צלעות, חוצה אחת מהן ומקביל לצלע השלישית, הוא קטע אמצעים.</p>
+  <div class="content-box">
+    <p>במשולש, קטע המחבר שתי צלעות, חוצה אחת מהן ומקביל לצלע השלישית, הוא קטע אמצעים.</p>
+  </div>
 </section>
 
 <p class="footer-note">החומר נכתב רק לפי הנושאים שנמסרו בפועל.</p>
